@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  open-source-hygiene:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: .\scripts\scan-open-source-leaks.ps1
+      - run: .\scripts\prepare-open-source.ps1 -OutputDir ..\agent-monitor-oss-open-source -Force
+      - run: .\scripts\scan-open-source-leaks.ps1
+        working-directory: ..\agent-monitor-oss-open-source
+
+  daemon:
+    runs-on: windows-latest
+    env:
+      NPM_CONFIG_REGISTRY: https://registry.npmjs.org/
+    defaults:
+      run:
+        working-directory: daemon
+    steps:
+      - uses: actions/checkout@v4
+      - run: .\scripts\scan-open-source-leaks.ps1
+        working-directory: .
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: daemon/package-lock.json
+      - run: npm ci
+      - run: npm test
+      - run: npm --registry=https://registry.npmjs.org/ audit --omit=dev --audit-level=high
+
+  android:
+    runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: android
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+      - uses: android-actions/setup-android@v3
+      - run: |
+          $sdk = $env:ANDROID_HOME.Replace('\', '\\').Replace(':', '\:')
+          Set-Content -Path .\local.properties -Value "sdk.dir=$sdk" -Encoding ASCII
+      - run: .\gradlew.bat :app:testDebugUnitTest :app:assembleDebug :app:assembleDebugAndroidTest
+      - run: ..\scripts\create-android-keystore.ps1 -Force
+      - run: .\gradlew.bat :app:assembleRelease

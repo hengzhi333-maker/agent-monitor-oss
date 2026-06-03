@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="780" viewBox="0 0 390 780" role="img" aria-labelledby="title desc">
+  <title id="title">Agent Monitor dashboard screenshot mockup</title>
+  <desc id="desc">Sanitized Android dashboard with one Tailscale host and generic agent activity.</desc>
+  <rect width="390" height="780" rx="28" fill="#101418"/>
+  <rect x="18" y="18" width="354" height="744" rx="24" fill="#151b20"/>
+  <text x="34" y="62" fill="#f3f6f4" font-family="Arial, sans-serif" font-size="24" font-weight="700">Agent Monitor</text>
+  <rect x="34" y="88" width="322" height="48" rx="8" fill="#202830"/>
+  <text x="50" y="118" fill="#9fb0a8" font-family="Arial, sans-serif" font-size="15">Search hosts, address, or group</text>
+  <text x="34" y="166" fill="#80e1bd" font-family="Arial, sans-serif" font-size="16" font-weight="700">Tailscale</text>
+  <rect x="34" y="184" width="322" height="270" rx="8" fill="#202830"/>
+  <text x="52" y="222" fill="#f3f6f4" font-family="Arial, sans-serif" font-size="20" font-weight="700">workstation</text>
+  <rect x="286" y="202" width="54" height="28" rx="14" fill="#183f31"/>
+  <text x="301" y="221" fill="#80e1bd" font-family="Arial, sans-serif" font-size="13">up</text>
+  <text x="52" y="252" fill="#9fb0a8" font-family="Arial, sans-serif" font-size="13">Tailscale · 100.64.0.10:8765 · pinned</text>
+  <line x1="52" y1="278" x2="338" y2="278" stroke="#303a42"/>
+  <text x="52" y="314" fill="#f3f6f4" font-family="Arial, sans-serif" font-size="17" font-weight="700">Codex</text>
+  <text x="294" y="314" fill="#80e1bd" font-family="Arial, sans-serif" font-size="15">active</text>
+  <text x="52" y="342" fill="#9fb0a8" font-family="Arial, sans-serif" font-size="14">Today 2 sessions · in 98.7M / out 317.6k tok</text>
+  <rect x="52" y="366" width="82" height="54" rx="7" fill="#151b20"/>
+  <rect x="150" y="366" width="82" height="54" rx="7" fill="#151b20"/>
+  <rect x="248" y="366" width="82" height="54" rx="7" fill="#151b20"/>
+  <text x="66" y="390" fill="#9fb0a8" font-family="Arial, sans-serif" font-size="12">Input</text>
+  <text x="66" y="410" fill="#f3f6f4" font-family="Arial, sans-serif" font-size="18">98.7M</text>
+  <text x="164" y="390" fill="#9fb0a8" font-family="Arial, sans-serif" font-size="12">Output</text>
+  <text x="164" y="410" fill="#f3f6f4" font-family="Arial, sans-serif" font-size="18">317.6k</text>
+  <text x="262" y="390" fill="#9fb0a8" font-family="Arial, sans-serif" font-size="12">Model</text>
+  <text x="262" y="410" fill="#f3f6f4" font-family="Arial, sans-serif" font-size="18">gpt-5</text>
+  <rect x="34" y="480" width="322" height="126" rx="8" fill="#202830"/>
+  <text x="52" y="520" fill="#f3f6f4" font-family="Arial, sans-serif" font-size="18" font-weight="700">Claude Code</text>
+  <text x="292" y="520" fill="#f4c06a" font-family="Arial, sans-serif" font-size="15">idle</text>
+  <text x="52" y="550" fill="#9fb0a8" font-family="Arial, sans-serif" font-size="14">Latest activity 2h ago</text>
+  <rect x="34" y="686" width="322" height="46" rx="10" fill="#202830"/>
+  <text x="58" y="715" fill="#80e1bd" font-family="Arial, sans-serif" font-size="14">Dashboard</text>
+  <text x="155" y="715" fill="#9fb0a8" font-family="Arial, sans-serif" font-size="14">Agents</text>
+  <text x="237" y="715" fill="#9fb0a8" font-family="Arial, sans-serif" font-size="14">Workbench</text>
+</svg>

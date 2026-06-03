@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Agent Monitor is local-first and supports LAN/Tailscale daemon URLs. -->
+    <base-config cleartextTrafficPermitted="true" />
+</network-security-config>

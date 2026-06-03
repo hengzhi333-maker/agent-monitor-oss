@@ -1,0 +1,20 @@
+{
+  "name": "agent-monitor-daemon",
+  "version": "0.2.0",
+  "type": "module",
+  "private": true,
+  "description": "Local agent monitoring daemon for Claude Code, Codex, Hermes, and service health checks",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node --test",
+    "gen-token": "node -e \"console.log(require('crypto').randomBytes(24).toString('hex'))\""
+  },
+  "dependencies": {
+    "mammoth": "^1.12.0",
+    "pdf-parse": "^2.4.5",
+    "qrcode": "^1.5.4",
+    "read-excel-file": "^9.0.10",
+    "word-extractor": "^1.0.4",
+    "ws": "^8.18.0"
+  }
+}

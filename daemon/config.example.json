@@ -1,0 +1,99 @@
+{
+  "host": "agent-monitor-pc",
+  "port": 8765,
+  "bindHost": "127.0.0.1",
+  "token": "change-me-please",
+  "tokens": [
+    {
+      "id": "phone-admin",
+      "name": "phone-admin",
+      "role": "admin",
+      "token": "",
+      "enabled": true
+    },
+    {
+      "id": "family-viewer",
+      "name": "family-viewer",
+      "role": "read-only",
+      "token": "",
+      "enabled": true
+    }
+  ],
+  "tls": {
+    "cert": "",
+    "key": ""
+  },
+  "authFailWindowMs": 60000,
+  "authFailMax": 10,
+  "corsOrigin": "",
+  "pingExposeHost": false,
+  "allowDefaultToken": false,
+  "privacy": {
+    "maskAccountEmails": false,
+    "redactCwd": false,
+    "hermesStatusMaxLen": 600
+  },
+  "remoteControl": {
+    "enabled": false,
+    "allowDangerousPermissions": false,
+    "defaultPermissionMode": "standard",
+    "allowedRemoteAddresses": [
+      "100.64.0.0/10"
+    ],
+    "defaultCwd": "C:\\Users\\you\\Documents\\AgentWorkspace",
+    "allowedCwds": [
+      "C:\\Users\\you\\Documents\\AgentWorkspace"
+    ],
+    "maxSessions": 20,
+    "maxOutputChars": 200000,
+    "dangerousSessionTtlMs": 1800000,
+    "attachmentTtlHours": 168
+  },
+  "alertRules": {
+    "agentOfflineGraceMs": 0,
+    "serviceFailureCount": 1,
+    "recoveryNotifications": true,
+    "cooldownMs": 300000,
+    "quietHours": {
+      "enabled": false,
+      "start": "22:00",
+      "end": "08:00",
+      "timezoneOffsetMinutes": 480,
+      "suppressBelow": "error"
+    }
+  },
+  "pollIntervalMs": 4000,
+  "activeWindowMs": 120000,
+  "idleWindowMs": 1800000,
+  "services": [
+    {
+      "id": "litellm",
+      "name": "LiteLLM proxy",
+      "url": "http://127.0.0.1:4000/health/liveliness"
+    },
+    {
+      "id": "sub2api-8320",
+      "name": "sub2api (8320)",
+      "url": "http://127.0.0.1:8320/health",
+      "accountHealth": {
+        "url": "http://127.0.0.1:8320/api/v1/admin/accounts",
+        "tokenEnv": "SUB2API_8320_TOKEN",
+        "fallbackTokenEnv": "SUB2API_ADMIN_TOKEN",
+        "login": {
+          "url": "http://127.0.0.1:8320/api/v1/auth/login",
+          "emailEnv": "SUB2API_ADMIN_EMAIL",
+          "passwordEnv": "SUB2API_ADMIN_PASSWORD"
+        },
+        "pageSize": 100,
+        "maxPages": 5,
+        "maxAccounts": 200
+      }
+    },
+    {
+      "id": "sub2api-8330",
+      "name": "sub2api (8330)",
+      "url": "http://127.0.0.1:8330/health",
+      "accountHealth": false
+    }
+  ]
+}

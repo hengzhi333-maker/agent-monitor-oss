@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="780" viewBox="0 0 390 780" role="img" aria-labelledby="title desc">
+  <title id="title">Agent Monitor workbench screenshot mockup</title>
+  <desc id="desc">Sanitized mobile workbench with generic prompt templates and no private content.</desc>
+  <rect width="390" height="780" rx="28" fill="#101418"/>
+  <rect x="18" y="18" width="354" height="744" rx="24" fill="#151b20"/>
+  <text x="34" y="62" fill="#f3f6f4" font-family="Arial, sans-serif" font-size="24" font-weight="700">Workbench</text>
+  <text x="34" y="88" fill="#9fb0a8" font-family="Arial, sans-serif" font-size="14">workstation · Codex · standard</text>
+  <rect x="34" y="120" width="322" height="80" rx="8" fill="#202830"/>
+  <text x="52" y="152" fill="#80e1bd" font-family="Arial, sans-serif" font-size="14">Template</text>
+  <text x="52" y="178" fill="#f3f6f4" font-family="Arial, sans-serif" font-size="16">Review current diff and suggest fixes</text>
+  <rect x="34" y="224" width="250" height="86" rx="8" fill="#202830"/>
+  <text x="52" y="254" fill="#f3f6f4" font-family="Arial, sans-serif" font-size="15">Please run the tests and summarize</text>
+  <text x="52" y="278" fill="#f3f6f4" font-family="Arial, sans-serif" font-size="15">the failing areas.</text>
+  <rect x="106" y="334" width="250" height="116" rx="8" fill="#183f31"/>
+  <text x="124" y="364" fill="#f3f6f4" font-family="Arial, sans-serif" font-size="15">Tests passed. I found one</text>
+  <text x="124" y="388" fill="#f3f6f4" font-family="Arial, sans-serif" font-size="15">documentation mismatch and</text>
+  <text x="124" y="412" fill="#f3f6f4" font-family="Arial, sans-serif" font-size="15">updated the release notes.</text>
+  <rect x="34" y="486" width="322" height="84" rx="8" fill="#202830"/>
+  <text x="52" y="518" fill="#9fb0a8" font-family="Arial, sans-serif" font-size="14">Git status</text>
+  <text x="52" y="544" fill="#f3f6f4" font-family="Arial, sans-serif" font-size="15">branch: main · 3 files changed</text>
+  <rect x="34" y="634" width="322" height="72" rx="12" fill="#202830"/>
+  <text x="52" y="676" fill="#9fb0a8" font-family="Arial, sans-serif" font-size="15">Type a prompt...</text>
+  <circle cx="318" cy="670" r="20" fill="#80e1bd"/>
+  <text x="311" y="676" fill="#101418" font-family="Arial, sans-serif" font-size="18" font-weight="700">&gt;</text>
+</svg>

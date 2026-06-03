@@ -1,0 +1,12 @@
+services:
+  agent-monitor:
+    build:
+      context: .
+    ports:
+      - "8765:8765"
+    volumes:
+      - ./config.json:/app/config.json:ro
+      - ./data:/app/data
+      - ${AGENT_WORKSPACE:-./workspace}:/workspace
+    environment:
+      AM_HOST_NAME: agent-monitor-docker

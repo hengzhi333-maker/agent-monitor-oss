@@ -1,0 +1,10 @@
+node_modules
+config.json
+*.log
+.agent-monitor-audit.jsonl
+.agent-monitor-devices.json
+.agent-monitor-history.sqlite*
+.agent-monitor.log.jsonl*
+.workbench-sessions.json
+.workbench-uploads
+npm-debug.log*

@@ -1,0 +1,11 @@
+﻿{
+    "name":  "agent-monitor-oss-source",
+    "generatedAt":  "2026-06-03T06:27:29.5864734Z",
+    "gitRevision":  "d34c794",
+    "note":  "Sanitized source tree for public repository preparation. Private runtime configs, logs, build outputs, keystores, APKs, and dependency folders are excluded.",
+    "requiredBeforePublish":  [
+                                  "Run scripts/scan-open-source-leaks.ps1 from this folder.",
+                                  "Review docs/OPEN_SOURCE_RELEASE_CHECKLIST.md.",
+                                  "Generate fresh daemon tokens after cloning; never publish daemon/config.json."
+                              ]
+}
