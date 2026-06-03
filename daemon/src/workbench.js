@@ -535,7 +535,7 @@ function resolveCommand(agentId) {
       : [
           path.join(process.env.APPDATA || path.join(home, 'AppData', 'Roaming'), 'npm', 'node_modules', '@anthropic-ai', 'claude-code', 'bin', 'claude.exe'),
         ];
-  return candidates.find((candidate) => fs.existsSync(candidate)) || (agentId === 'codex' ? 'codex.cmd' : 'claude.cmd');
+  return candidates.find((candidate) => fs.existsSync(candidate)) || (agentId === 'codex' ? 'codex' : 'claude');
 }
 
 function appendLaunchError(session, turnId, err) {
